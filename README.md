@@ -10,7 +10,7 @@ We'll go super fast since we are not focusing here on doing a full tutorial of C
 
 Let's first import all our required libraries:
 
-
+```
 %matplotlib inline
 ​
 import glob
@@ -30,6 +30,7 @@ from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import ModelCheckpoint
 These are our training images:
+```
 
 Circles
 
