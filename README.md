@@ -31,7 +31,7 @@ from keras.callbacks import ModelCheckpoint
 These are our training images:
 ```
 
-Circles
+## Circles
 
 ```
 images = []
@@ -45,7 +45,7 @@ for i, image in enumerate(images):
     plt.imshow(image)
 ```
 
-Squares
+## Squares
 
 ```
 images = []
@@ -59,7 +59,7 @@ for i, image in enumerate(images):
     plt.imshow(image)
 ```
 
-Triangles
+## Triangles
 
 ```
 images = []
@@ -131,47 +131,6 @@ Let's take a look at our model summary:
 ```
 classifier.summary()
 ```
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-conv2d_25 (Conv2D)           (None, 28, 28, 32)        896       
-_________________________________________________________________
-conv2d_26 (Conv2D)           (None, 26, 26, 32)        9248      
-_________________________________________________________________
-max_pooling2d_13 (MaxPooling (None, 13, 13, 32)        0         
-_________________________________________________________________
-dropout_17 (Dropout)         (None, 13, 13, 32)        0         
-_________________________________________________________________
-conv2d_27 (Conv2D)           (None, 13, 13, 64)        18496     
-_________________________________________________________________
-conv2d_28 (Conv2D)           (None, 11, 11, 64)        36928     
-_________________________________________________________________
-max_pooling2d_14 (MaxPooling (None, 5, 5, 64)          0         
-_________________________________________________________________
-dropout_18 (Dropout)         (None, 5, 5, 64)          0         
-_________________________________________________________________
-conv2d_29 (Conv2D)           (None, 5, 5, 64)          36928     
-_________________________________________________________________
-conv2d_30 (Conv2D)           (None, 3, 3, 64)          36928     
-_________________________________________________________________
-max_pooling2d_15 (MaxPooling (None, 1, 1, 64)          0         
-_________________________________________________________________
-dropout_19 (Dropout)         (None, 1, 1, 64)          0         
-_________________________________________________________________
-flatten_5 (Flatten)          (None, 64)                0         
-_________________________________________________________________
-dense_9 (Dense)              (None, 512)               33280     
-_________________________________________________________________
-dropout_20 (Dropout)         (None, 512)               0         
-_________________________________________________________________
-dense_10 (Dense)             (None, 3)                 1539      
-=================================================================
-Total params: 174,243
-Trainable params: 174,243
-Non-trainable params: 0
-_________________________________________________________________
-We compile the model utilizing rmsprop as our optimizer, categorical_crossentropy as our loss function and we specify accuracy as the metric we want to keep track of:
-
 
 # Compiling the CNN
 ```
